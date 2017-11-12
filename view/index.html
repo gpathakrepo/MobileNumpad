@@ -1,0 +1,20 @@
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+<script src="../js/Numpad.js"></script>
+<link rel="stylesheet"  href="../css/jquery.mobile-1.4.5.min.css">
+<div class="ui-field-contain">
+Decimal keypad: <input type="text" name="numpadBox" class="deciKeypad" />
+</div>
+<div class="ui-field-contain">
+integer keypad: <input type="text" name="numpadBox" class="intKeypad" />
+</div>
+<script>
+$().ready(function () {
+    $('body').on('focus', '.deciKeypad', function () {
+        NumpadPopup($(this));
+    });
+    $('body').on('focus', '.intKeypad', function () {
+        NumpadPopup($(this));
+    });
+});
+</script>
